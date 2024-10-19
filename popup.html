@@ -3,31 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Popup</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        width: 200px;
-        padding: 10px;
-      }
-      button {
-        padding: 10px;
-        background-color: #4caf50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #45a049;
-      }
-    </style>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Chatbot UI</title>
   </head>
   <body>
-    <h3>Form Autofill</h3>
-    <p id="message"></p>
-    <button id="autofillButton">Autofill Form</button>
-
+    <main>
+      <div class="chatbot-container">
+        <div class="chatbot-header">
+          <h3 class="heading">Click to Autofill Form</h3>
+          <button class="autofill-button">Autofill</button>
+          <h3 class="form-chat-assistant">Form Chat Assistant</h3>
+        </div>
+        <div class="chatbot-conversation-container">
+          <div class="speech speech-ai">Hello! How can I assist you?</div>
+        </div>
+        <div class="chatbot-input-container">
+          <input
+            type="text"
+            id="chatbox-input"
+            placeholder="Type your question..."
+          />
+          <button id="chatbox-send">Send</button>
+        </div>
+        <button
+          id="open-sidebar-button"
+          class="autofill-button"
+          style="opacity: 0.8; margin-top: 1em; width: 100%"
+        >
+          Open in Sidebar
+        </button>
+      </div>
+    </main>
     <script src="scripts/popup.js"></script>
   </body>
 </html>
